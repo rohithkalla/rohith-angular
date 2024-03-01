@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-angularapp-service
+spec:
+  selector:
+    app: my-angularapp  # Should match the labels in your Deployment
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
